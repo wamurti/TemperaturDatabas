@@ -103,6 +103,25 @@
         </tr>
       </table>
     </div>
+    <div class="flex-child" th:if="${ not#lists.isEmpty(av)}">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Acke</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr th:each="t : ${av}">
+          <td th:text="${t.id}"></td>
+          <td th:text="${t.temperatur}"></td>
+          <td th:text="${t.tid.toLocalDate()}"></td>
+          <td th:text="${t.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
 
   </div>
 

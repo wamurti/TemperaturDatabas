@@ -105,6 +105,25 @@
         </tr>
       </table>
     </div>
+    <div class="flex-child">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Acke</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr>
+          <td th:text="${as.id}"></td>
+          <td th:text="${as.temperatur}"></td>
+          <td th:text="${as.tid.toLocalDate()}"></td>
+          <td th:text="${as.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
   </div>
 
 
